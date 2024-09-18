@@ -1,0 +1,19 @@
+{
+  "name": "com.athena.uiframework",
+  "version": "0.0.1",
+  "type": "sample",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thnthnh1/athena_framework.git"
+  },
+  "author": "Athena",
+  "license": "MIT",
+  "homepage": "https://github.com/thnthnh1/athena_framework#readme",
+  "samples": [
+    {
+      "displayName": "Test",
+      "description": "Description for Test",
+      "path": "Samples~/Test"
+    }
+  ]
+}
