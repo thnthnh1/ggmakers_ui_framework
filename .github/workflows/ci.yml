@@ -34,4 +34,4 @@ jobs:
         fi
         git push -u origin upm
       env:
-        PKG_ROOT: Packages/UIFramework
+        PKG_ROOT: Packages/com.athena.uiframework
