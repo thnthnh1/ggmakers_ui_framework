@@ -11,9 +11,9 @@
   "homepage": "https://github.com/thnthnh1/athena_framework#readme",
   "samples": [
     {
-      "displayName": "Test",
-      "description": "Description for Test",
-      "path": "Samples~/Test"
+        "displayName": "Demo",
+        "description": "Sample code for UIFramework",
+        "path": "Samples~/Demo"
     }
   ]
 }

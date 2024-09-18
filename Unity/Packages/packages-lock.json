@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.athena.uiframework": {
-      "version": "file:UIFramework",
+      "version": "file:com.athena.uiframework",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
