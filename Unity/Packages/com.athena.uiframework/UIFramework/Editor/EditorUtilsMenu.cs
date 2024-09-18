@@ -108,7 +108,6 @@ namespace Athena.Editor
             mainCanvas.transform.SetParent(UIManager.transform, false);
             mainCanvas.renderMode = RenderMode.ScreenSpaceCamera;
             mainCanvas.pixelPerfect = false;
-            mainCanvas.vertexColorAlwaysGammaSpace = true;
             mainCanvas.worldCamera = UICamera;
             mainCanvas.planeDistance = 0f;
             mainCanvas.gameObject.layer = uiLayer;
@@ -211,6 +210,12 @@ namespace Athena.Editor
 
             //Set layers
             UIManager.UILayers = new List<Transform>() { gameCanvasRect.transform, mainCanvasRect.transform, overlayCanvasRect.transform };
+
+#if UNITY_2022_1_OR_NEWER
+            gameCanvas.vertexColorAlwaysGammaSpace = true;
+            mainCanvas.vertexColorAlwaysGammaSpace = true;
+            overlayCanvas.vertexColorAlwaysGammaSpace = true;
+#endif
         }
     }
 }
