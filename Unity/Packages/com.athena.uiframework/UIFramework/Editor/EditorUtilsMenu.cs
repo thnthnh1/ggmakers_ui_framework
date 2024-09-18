@@ -141,7 +141,6 @@ namespace Athena.Editor
             overlayCanvas.transform.SetParent(UIManager.transform, false);
             overlayCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
             overlayCanvas.pixelPerfect = false;
-            mainCanvas.vertexColorAlwaysGammaSpace = true;
             overlayCanvas.planeDistance = 0f;
             overlayCanvas.gameObject.layer = screenOverlayLayer;
             overlayCanvas.sortingLayerName = "ScreenOverlay";
@@ -175,7 +174,6 @@ namespace Athena.Editor
             gameCanvas.transform.SetSiblingIndex(2);
             gameCanvas.renderMode = RenderMode.WorldSpace;
             gameCanvas.pixelPerfect = false;
-            gameCanvas.vertexColorAlwaysGammaSpace = true;
             mainCanvas.worldCamera = UICamera;
             gameCanvas.planeDistance = 0f;
             gameCanvas.gameObject.layer = gameLayer;
