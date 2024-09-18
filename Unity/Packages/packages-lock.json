@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.athena.uiframework": {
+      "version": "file:UIFramework",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.coffee.upm-git-extension": {
       "version": "https://github.com/mob-sakai/UpmGitExtension.git",
       "depth": 0,
