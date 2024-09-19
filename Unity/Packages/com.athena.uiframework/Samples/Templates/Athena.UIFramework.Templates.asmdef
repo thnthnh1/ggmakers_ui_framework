@@ -1,0 +1,16 @@
+{
+    "name": "Athena.UIFramework.Templates",
+    "rootNamespace": "",
+    "references": [
+        "Athena.UIFramework.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
