@@ -28,6 +28,7 @@ To update the package, change suffix #{version} to the target version.
 ```
 Athena > UIFramework > Create UIManager
 ```
+
 ![create_ui_manager](https://github.com/user-attachments/assets/e9d77dcc-e8c6-43a9-b2f3-cd0ffccf329c)
 
 2. Create new class inheirits UIController for each UI that you want to implement.
@@ -50,9 +51,10 @@ Resources > UIPrefabs
 ```
 
 4. Attach DemoUI.cs to the new UI prefab.
+
 ![create_prefab](https://github.com/user-attachments/assets/cd1d34ec-d6cd-4477-9393-89f573bb7190)
 
-5. Call UIManager's instance to show DemoUI
+6. Call UIManager's instance to show DemoUI
 
 ```C#
 using UnityEngine;
