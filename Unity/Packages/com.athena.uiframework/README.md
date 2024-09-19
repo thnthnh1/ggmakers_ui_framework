@@ -18,7 +18,6 @@ Add this git repository to your Packages/manifest.json to install.
 ## Usage
 
 Create UIManager in the scene by select: Athena -> UIFramework -> Create UIManager on the toolbar
-
 <!-- CREATE UIMANAGER -->
 <br />
 <div align="left">
@@ -26,6 +25,7 @@ Create UIManager in the scene by select: Athena -> UIFramework -> Create UIManag
     <img src="Images/create_ui_manager.png" alt="Logo" width="561" height="137">
   </a>
 </div>
+
 
 Create new class inheirits UIController for each UI that you want to implement.
 
@@ -42,7 +42,6 @@ public class DemoUI : UIController
 ```
 
 Create new UI prefab at Resources/UIPrefabs/ and attach DemoUI to this prefab.
-
 <!-- CREATE PREFAB -->
 <br />
 <div align="left">
@@ -51,7 +50,8 @@ Create new UI prefab at Resources/UIPrefabs/ and attach DemoUI to this prefab.
   </a>
 </div>
 
-Call UIManager.Instance.ShowUI<T>(string path, bool isOverlap, int layer) to show DemoUI
+
+Call UIManager's instance to show DemoUI
 
 ```C#
 using UnityEngine;
