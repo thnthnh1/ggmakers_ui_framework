@@ -7,6 +7,7 @@ public class SceneController : MonoBehaviour
 {
     private void Start()
     {
-        UIManager.Instance.ShowUIOnTop<DemoUI>("DemoUI", true, UILayer.Main);
+        var demoUI = UIManager.Instance.ShowUIOnTop<DemoUI>("DemoUI", true, UILayer.Main);
+        demoUI.Setup();
     }
 }
