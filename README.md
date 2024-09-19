@@ -9,7 +9,7 @@ Find the manifest.json file in the Packages folder of your project and edit it t
 ```
 {
   "dependencies": {
-    "com.athena.uiframework": "https://github.com/thnthnh1/athena_framework.git#v1.0.1",
+    "com.athena.uiframework": "https://github.com/thnthnh1/athena_framework.git",
     ...
   }
 }
@@ -18,7 +18,7 @@ Find the manifest.json file in the Packages folder of your project and edit it t
 To update the package, change suffix #{version} to the target version.
 
 ```
- "com.athena.uiframework": "https://github.com/thnthnh1/athena_framework.git#v1.0.2"
+ "com.athena.uiframework": "https://github.com/thnthnh1/athena_framework.git#v1.0.4"
 ```
 
 
