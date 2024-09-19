@@ -1,4 +1,4 @@
-![create_ui_manager](https://github.com/user-attachments/assets/e0df1a95-d1cf-4b64-b043-6b2d6b1bc54e)# UIFramework
+# UIFramework
 
 UIFramework is a framework based on UGUI to help you setup, create and implement the UI in game easily.
 
