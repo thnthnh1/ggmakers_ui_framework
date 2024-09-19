@@ -4,7 +4,7 @@ UIFramework is a framework based on UGUI to help you setup, create and implement
 
 ## Installation
 
-Add this git repository to your Packages/manifest.json to install.
+Find the manifest.json file in the Packages folder of your project and edit it to look like this:
 
 ```
 {
@@ -24,7 +24,10 @@ To update the package, change suffix #{version} to the target version.
 
 ## Usage
 
-Create UIManager in the scene by select: Athena -> UIFramework -> Create UIManager on the toolbar
+1. Create UIManager in the scene by select the command on the toolbar:
+```
+Athena > UIFramework > Create UIManager
+```
 <!-- CREATE UIMANAGER -->
 <br />
 <div align="left">
@@ -34,7 +37,7 @@ Create UIManager in the scene by select: Athena -> UIFramework -> Create UIManag
 </div>
 
 
-Create new class inheirits UIController for each UI that you want to implement.
+2. Create new class inheirits UIController for each UI that you want to implement.
 
 ```C#
 using Athena.UIFramework;
@@ -48,7 +51,7 @@ public class DemoUI : UIController
 }
 ```
 
-Create new UI prefab at Resources/UIPrefabs/ and attach DemoUI to this prefab.
+3. Create new UI prefab at Resources/UIPrefabs/ and attach DemoUI to this prefab.
 <!-- CREATE PREFAB -->
 <br />
 <div align="left">
@@ -58,7 +61,7 @@ Create new UI prefab at Resources/UIPrefabs/ and attach DemoUI to this prefab.
 </div>
 
 
-Call UIManager's instance to show DemoUI
+4. Call UIManager's instance to show DemoUI
 
 ```C#
 using UnityEngine;
@@ -75,6 +78,8 @@ public class SceneController : MonoBehaviour
 
 ```
 
+## Note
+
 There are 3 pre-defined layers to use and they follow this order:
 "Game" < "Main" < Overlay
 
@@ -86,8 +91,6 @@ public static class UILayer
     public static int Overlay = 2;
 }
 ```
-
-## Note
 
 Attach SafeArea.cs to the UI prefab that you want to show in the device safe area.
 Attach SafeAreaSimulator to UIManager game object if you want to check the safe area in Editor.
