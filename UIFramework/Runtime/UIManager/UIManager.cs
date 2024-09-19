@@ -80,6 +80,7 @@ namespace Athena.UIFramework
             set { _overlayRect = value; }
         }
 
+        [HideInInspector]
         public string BaseUIPath
         {
             get { return _baseUIPath; }
