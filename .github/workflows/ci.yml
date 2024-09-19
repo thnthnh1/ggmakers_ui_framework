@@ -38,6 +38,7 @@ jobs:
         PKG_ROOT: Unity/Packages/com.athena.uiframework
     - name: Create upm git tag
       run: |
+        npm audit fix
         git tag $TAG upm
         git push origin --tags
       env:
