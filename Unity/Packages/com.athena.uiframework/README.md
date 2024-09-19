@@ -6,7 +6,7 @@ UIFramework is a framework based on UGUI to help you setup, create and implement
 
 Add this git repository to your Packages/manifest.json to install.
 
-```JSON
+```
 {
   "dependencies": {
     "com.athena.uiframework": "https://github.com/thnthnh1/athena_framework.git#v1.0.1",
@@ -14,6 +14,13 @@ Add this git repository to your Packages/manifest.json to install.
   }
 }
 ```
+
+To update the package, change suffix #{version} to the target version.
+
+```
+ "com.athena.uiframework": "https://github.com/thnthnh1/athena_framework.git#v1.0.2"
+```
+
 
 ## Usage
 
