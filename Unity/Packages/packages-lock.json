@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.athena.com.athena.uiframework": {
+    "com.athena.uiframework": {
       "version": "file:com.athena.uiframework",
       "depth": 0,
       "source": "embedded",

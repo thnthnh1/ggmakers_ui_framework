@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 1.0.4 (2024-09-19)
+
+Fix:
+
+  - fixed package version in Package Manager
+
 ## 1.0.2 (2024-09-19)
 
 Features:

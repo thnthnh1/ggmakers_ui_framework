@@ -1,6 +1,6 @@
 {
-  "name": "com.athena.com.athena.uiframework",
-  "version": "1.0.2",
+  "name": "com.athena.uiframework",
+  "version": "1.0.4",
   "type": "sample",
   "repository": {
     "type": "git",
