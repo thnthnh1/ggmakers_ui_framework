@@ -51,7 +51,12 @@ public class DemoUI : UIController
 }
 ```
 
-3. Create new UI prefab at Resources/UIPrefabs/ and attach DemoUI to this prefab.
+3. Create new UI prefab at folder:
+```
+Resources > UIPrefabs
+```
+
+4. Attach DemoUI.cs to the new UI prefab.
 <!-- CREATE PREFAB -->
 <br />
 <div align="left">
@@ -61,7 +66,7 @@ public class DemoUI : UIController
 </div>
 
 
-4. Call UIManager's instance to show DemoUI
+5. Call UIManager's instance to show DemoUI
 
 ```C#
 using UnityEngine;
