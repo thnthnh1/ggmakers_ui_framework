@@ -1,6 +1,6 @@
 {
-  "name": "com.athena.uiframework",
-  "version": "1.0.0",
+  "name": "com.athena.com.athena.uiframework",
+  "version": "1.0.1",
   "type": "sample",
   "repository": {
     "type": "git",
@@ -11,9 +11,10 @@
   "homepage": "https://github.com/thnthnh1/athena_framework#readme",
   "samples": [
     {
-        "displayName": "Demo",
-        "description": "Sample code for UIFramework",
-        "path": "Samples~/Demo"
+      "displayName": "Demo",
+      "description": "Sample code for UIFramework",
+      "path": "Samples~/Demo"
     }
-  ]
+  ],
+  "displayName": "UIFramework"
 }
