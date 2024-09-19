@@ -17,9 +17,17 @@ Add this git repository to your Packages/manifest.json to install.
 
 ## Usage
 
-Create UIManager in the scene by select: Athena/UIFramework/Create UIManager on the toolbar
+Create UIManager in the scene by select: Athena -> UIFramework -> Create UIManager on the toolbar
 
-Create new class inheirit UIController for each UI that you want to implement.
+<!-- CREATE UIMANAGER -->
+<br />
+<div align="left">
+  <a href="">
+    <img src="Images/create_ui_manager.png" alt="Logo" width="561" height="137">
+  </a>
+</div>
+
+Create new class inheirits UIController for each UI that you want to implement.
 
 ```C#
 using Athena.UIFramework;
@@ -35,11 +43,17 @@ public class DemoUI : UIController
 
 Create new UI prefab at Resources/UIPrefabs/ and attach DemoUI to this prefab.
 
-Call UIManager.Instance.ShowUI<T>(string path, bool isOverlay, int layer) to show DemoUI
+<!-- CREATE PREFAB -->
+<br />
+<div align="left">
+  <a href="">
+    <img src="Images/create_prefab.png" alt="Logo" width="660" height="467">
+  </a>
+</div>
+
+Call UIManager.Instance.ShowUI<T>(string path, bool isOverlap, int layer) to show DemoUI
 
 ```C#
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Athena.UIFramework;
 
@@ -47,12 +61,14 @@ public class SceneController : MonoBehaviour
 {
     private void Start()
     {
-        UIManager.Instance.ShowUIOnTop<DemoUI>("DemoUI", true, UILayer.Main);
+        var demoUI = UIManager.Instance.ShowUIOnTop<DemoUI>("DemoUI", true, UILayer.Main);
+        demoUI.Setup();
     }
 }
+
 ```
 
-There are 3 layers to show in UIFramework and they follow this order:
+There are 3 pre-defined layers to use and they follow this order:
 "Game" < "Main" < Overlay
 
 ```C#
@@ -64,6 +80,7 @@ public static class UILayer
 }
 ```
 
-Attach SafeArea.cs to the UI prefab that you want to show in the device safe area.
+## Note
 
+Attach SafeArea.cs to the UI prefab that you want to show in the device safe area.
 Attach SafeAreaSimulator to UIManager game object if you want to check the safe area in Editor.
