@@ -8,7 +8,7 @@ jobs:
     name: release
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - name: Semantic release
@@ -18,7 +18,7 @@ jobs:
         extra_plugins: |
           @semantic-release/changelog
           @semantic-release/git
-        branch: master
+        branch: main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Create upm branch
