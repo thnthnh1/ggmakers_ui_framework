@@ -21,6 +21,9 @@ jobs:
         branch: main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Log
+      run: |
+        echo ${{ steps.semantic.outputs.new_release_published }}
     - name: Create upm branch
       run: |
         git branch -d upm &> /dev/null || echo upm branch not found
