@@ -40,7 +40,7 @@ namespace GGMakers.UIFramework.Utilities
 
         private void Update()
         {
-            if (_rect.sizeDelta != UICanvasRect.sizeDelta && !_updatingSize)
+            if ((_rect.sizeDelta != UICanvasRect.sizeDelta || _rect.localScale != UICanvasRect.localScale) && !_updatingSize)
             {
                 UpdateSize();
             }
