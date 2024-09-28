@@ -74,44 +74,45 @@ namespace GGMakers.Editor
             var gameLayer = LayerMask.NameToLayer("Game");
 
             //Create UIManager
-            var UIManager = new GameObject("UIManager", typeof(UIManager)).GetComponent<UIManager>();
-            UIManager.gameObject.layer = uiLayer;
-            UIManager.BaseUIPath = "UIPrefabs";
-            UIManager.UnlitTextureColorMaterial = Resources.Load<Material>("Materials/unlit-texture-color");
+            var uiManager = new GameObject("UIManager", typeof(UIManager)).GetComponent<UIManager>();
+            uiManager.gameObject.layer = uiLayer;
+            uiManager.BaseUIPath = "UIPrefabs";
+            uiManager.UnlitTextureColorMaterial = Resources.Load<Material>("Materials/unlit-texture-color");
 
             //Create UI camera
-            var UICamera = new GameObject("UICamera", typeof(Camera)).GetComponent<Camera>();
-            UICamera.gameObject.layer = uiLayer;
-            UICamera.transform.SetParent(UIManager.transform, false);
-            UICamera.renderingPath = RenderingPath.Forward;
-            UICamera.clearFlags = CameraClearFlags.Depth;
-            UICamera.orthographic = true;
-            UICamera.orthographicSize = 9.6f;
-            UICamera.nearClipPlane = -100f;
-            UICamera.farClipPlane = 100f;
-            UICamera.useOcclusionCulling = false;
-            UICamera.allowHDR = false;
-            UICamera.allowMSAA = false;
-            UICamera.cullingMask = 1 << uiLayer | 1 << screenOverlayLayer;
-            UIManager.CameraUI = UICamera;
+            var uiCamera = new GameObject("UICamera", typeof(Camera)).GetComponent<Camera>();
+            uiCamera.gameObject.layer = uiLayer;
+            uiCamera.transform.SetParent(uiManager.transform, false);
+            uiCamera.renderingPath = RenderingPath.Forward;
+            uiCamera.clearFlags = CameraClearFlags.Depth;
+            uiCamera.orthographic = true;
+            uiCamera.orthographicSize = 9.6f;
+            uiCamera.nearClipPlane = -100f;
+            uiCamera.farClipPlane = 100f;
+            uiCamera.useOcclusionCulling = false;
+            uiCamera.allowHDR = false;
+            uiCamera.allowMSAA = false;
+            uiCamera.cullingMask = 1 << uiLayer | 1 << screenOverlayLayer;
+            uiCamera.depth = 100;
+            uiManager.CameraUI = uiCamera;
 
             //Create EventSystem
             var eventSystem = new GameObject("EventSystem", typeof(UnityEngine.EventSystems.EventSystem)).GetComponent<UnityEngine.EventSystems.EventSystem>();
             eventSystem.gameObject.layer = uiLayer;
-            eventSystem.transform.SetParent(UIManager.transform, false);
+            eventSystem.transform.SetParent(uiManager.transform, false);
             eventSystem.gameObject.AddComponent<UnityEngine.EventSystems.StandaloneInputModule>();
-            UIManager.EventSystem = eventSystem;
+            uiManager.EventSystem = eventSystem;
 
             //Create MainCanvas
             var mainCanvas = new GameObject("MainCanvas", typeof(Canvas)).GetComponent<Canvas>();
             mainCanvas.gameObject.AddComponent<UnityEngine.UI.GraphicRaycaster>();
-            mainCanvas.transform.SetParent(UIManager.transform, false);
+            mainCanvas.transform.SetParent(uiManager.transform, false);
             mainCanvas.renderMode = RenderMode.ScreenSpaceCamera;
             mainCanvas.pixelPerfect = false;
-            mainCanvas.worldCamera = UICamera;
+            mainCanvas.worldCamera = uiCamera;
             mainCanvas.planeDistance = 0f;
             mainCanvas.gameObject.layer = uiLayer;
-            UIManager.MainCanvas = mainCanvas;
+            uiManager.MainCanvas = mainCanvas;
 
             //MainCanvas scaler
             var canvasScaler = mainCanvas.gameObject.AddComponent<UnityEngine.UI.CanvasScaler>();
@@ -133,18 +134,18 @@ namespace GGMakers.Editor
             mainCanvasRect.offsetMax = Vector2.zero;
             mainCanvasRect.gameObject.layer = uiLayer;
             mainCanvas.sortingLayerName = "UI";
-            UIManager.MainRect = mainCanvasRect;
+            uiManager.MainRect = mainCanvasRect;
 
             //Create OverlayCanvas
             var overlayCanvas = new GameObject("OverlayCanvas", typeof(Canvas)).GetComponent<Canvas>();
             overlayCanvas.gameObject.AddComponent<UnityEngine.UI.GraphicRaycaster>();
-            overlayCanvas.transform.SetParent(UIManager.transform, false);
+            overlayCanvas.transform.SetParent(uiManager.transform, false);
             overlayCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
             overlayCanvas.pixelPerfect = false;
             overlayCanvas.planeDistance = 0f;
             overlayCanvas.gameObject.layer = screenOverlayLayer;
             overlayCanvas.sortingLayerName = "ScreenOverlay";
-            UIManager.OverlayCanvas = overlayCanvas;
+            uiManager.OverlayCanvas = overlayCanvas;
 
             //OverlayCanvas scaler
             var overlayCanvasScaler = overlayCanvas.gameObject.AddComponent<UnityEngine.UI.CanvasScaler>();
@@ -165,20 +166,20 @@ namespace GGMakers.Editor
             overlayCanvasRect.offsetMin = Vector2.zero;
             overlayCanvasRect.offsetMax = Vector2.zero;
             overlayCanvasRect.gameObject.layer = screenOverlayLayer;
-            UIManager.OverlayRect = overlayCanvasRect;
+            uiManager.OverlayRect = overlayCanvasRect;
 
             //Create GameCanvas
             var gameCanvas = new GameObject("GameCanvas", typeof(Canvas)).GetComponent<Canvas>();
             gameCanvas.gameObject.AddComponent<UnityEngine.UI.GraphicRaycaster>();
-            gameCanvas.transform.SetParent(UIManager.transform, false);
+            gameCanvas.transform.SetParent(uiManager.transform, false);
             gameCanvas.transform.SetSiblingIndex(2);
             gameCanvas.renderMode = RenderMode.WorldSpace;
             gameCanvas.pixelPerfect = false;
-            mainCanvas.worldCamera = UICamera;
+            mainCanvas.worldCamera = uiCamera;
             gameCanvas.planeDistance = 0f;
             gameCanvas.gameObject.layer = gameLayer;
             gameCanvas.sortingLayerName = "Game";
-            UIManager.GameCanvas = gameCanvas;
+            uiManager.GameCanvas = gameCanvas;
 
             //GameCanvas scaler
             var gameCanvasScaler = gameCanvas.gameObject.AddComponent<UnityEngine.UI.CanvasScaler>();
@@ -204,16 +205,19 @@ namespace GGMakers.Editor
             gameCanvasRect.offsetMin = Vector2.zero;
             gameCanvasRect.offsetMax = Vector2.zero;
             gameCanvasRect.gameObject.layer = gameLayer;
-            UIManager.GameRect = gameCanvasRect;
+            uiManager.GameRect = gameCanvasRect;
 
             //Set layers
-            UIManager.UILayers = new List<Transform>() { gameCanvasRect.transform, mainCanvasRect.transform, overlayCanvasRect.transform };
+            uiManager.UILayers = new List<Transform>() { gameCanvasRect.transform, mainCanvasRect.transform, overlayCanvasRect.transform };
 
 #if UNITY_2022_1_OR_NEWER
             gameCanvas.vertexColorAlwaysGammaSpace = true;
             mainCanvas.vertexColorAlwaysGammaSpace = true;
             overlayCanvas.vertexColorAlwaysGammaSpace = true;
 #endif
+
+            //Add safe area simulator
+            uiManager.gameObject.AddComponent<SafeAreaSimulator>();
         }
     }
 }
