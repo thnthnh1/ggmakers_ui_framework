@@ -82,6 +82,7 @@ namespace GGMakers.Editor
             //Create UI camera
             var uiCamera = new GameObject("UICamera", typeof(Camera)).GetComponent<Camera>();
             uiCamera.gameObject.layer = uiLayer;
+            uiCamera.gameObject.AddComponent<AudioListener>();
             uiCamera.transform.SetParent(uiManager.transform, false);
             uiCamera.renderingPath = RenderingPath.Forward;
             uiCamera.clearFlags = CameraClearFlags.Depth;
@@ -194,7 +195,7 @@ namespace GGMakers.Editor
 
             //Update GameCanvas size
             var worlSpaceCanvasScaler = gameCanvas.gameObject.AddComponent<WorldSpaceCanvasScaler>();
-            worlSpaceCanvasScaler.UICanvas = mainCanvas;
+            worlSpaceCanvasScaler.UICanvasRect = mainCanvas.GetComponent<RectTransform>();
             worlSpaceCanvasScaler.UpdateSize();
 
             //GameCanvas Rect
