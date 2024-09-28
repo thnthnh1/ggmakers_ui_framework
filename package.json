@@ -1,0 +1,20 @@
+{
+  "name": "com.ggmakers.uiframework",
+  "version": "1.0.4",
+  "type": "sample",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thnthnh1/ggmakers_ui_framework"
+  },
+  "author": "GGMakers",
+  "license": "MIT",
+  "homepage": "https://github.com/thnthnh1/ggmakers_ui_framework#readme",
+  "samples": [
+    {
+      "displayName": "Demo",
+      "description": "Sample code for UIFramework",
+      "path": "Samples~/Demo"
+    }
+  ],
+  "displayName": "UIFramework"
+}
