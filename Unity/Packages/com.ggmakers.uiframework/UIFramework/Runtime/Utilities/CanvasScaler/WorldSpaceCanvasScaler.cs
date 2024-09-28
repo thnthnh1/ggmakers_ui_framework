@@ -8,10 +8,9 @@ namespace GGMakers.UIFramework.Utilities
     public class WorldSpaceCanvasScaler : MonoBehaviour
     {
         [SerializeField]
-        public Canvas UICanvas;
+        public RectTransform UICanvasRect;
 
         private RectTransform _rect;
-        private Vector2 _uiCanvasSize;
 
         private void Start()
         {
@@ -21,7 +20,6 @@ namespace GGMakers.UIFramework.Utilities
         public void UpdateSize()
         {
             _rect = GetComponent<RectTransform>();
-            _uiCanvasSize = UICanvas.GetComponent<RectTransform>().sizeDelta;
 
             StartCoroutine(snapSizeProcess());
         }
@@ -34,15 +32,15 @@ namespace GGMakers.UIFramework.Utilities
 
             yield return _yieldEndOfFrame;
 
-            _rect.sizeDelta = _uiCanvasSize;
-            _rect.localScale = UICanvas.transform.localScale;
+            _rect.sizeDelta = UICanvasRect.sizeDelta;
+            _rect.localScale = UICanvasRect.localScale;
 
             _updatingSize = false;
         }
 
         private void Update()
         {
-            if (_rect.sizeDelta != _uiCanvasSize && !_updatingSize)
+            if (_rect.sizeDelta != UICanvasRect.sizeDelta && !_updatingSize)
             {
                 UpdateSize();
             }
