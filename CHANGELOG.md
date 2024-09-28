@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/thnthnh1/ggmakers_ui_framework/compare/v1.0.12...v1.0.13) (2024-09-28)
+
+
+### Bug Fixes
+
+* WorldSpaceCanvas size update ([abeeaff](https://github.com/thnthnh1/ggmakers_ui_framework/commit/abeeaffe8fd63d920a103762f341fb87c3acbc79))
+
 ## [1.0.12](https://github.com/thnthnh1/ggmakers_ui_framework/compare/v1.0.11...v1.0.12) (2024-09-28)
 
 
