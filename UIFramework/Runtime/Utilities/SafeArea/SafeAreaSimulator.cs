@@ -13,13 +13,14 @@ namespace GGMakers.UIFramework.Utilities
             if (!Application.isEditor)
                 Destroy (this);
 
+#if UNITY_IOS
+            _device = SafeArea.SimDevice.iPhoneXsMax;
+#elif UNITY_ANDROID
+            _device = SafeArea.SimDevice.Pixel3XL_LSR;
+#endif
+
             ToggleSafeArea();
         }
-
-        //void Update ()
-        //{
-        //    ToggleSafeArea ();
-        //}
 
         /// <summary>
         /// Toggle the safe area simulation device.
