@@ -9,7 +9,7 @@
           { "type": "style", "release": "patch" },
           { "type": "update", "release": "patch" },
           { "type": "fix", "release": "patch" },
-          { "type": "release", "release": "patch" }
+          { "type": "feat", "release": "minor" }
         ],
         "parserOpts": {
           "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
