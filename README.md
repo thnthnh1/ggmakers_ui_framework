@@ -9,7 +9,7 @@ Find the manifest.json file in the Packages folder of your project and edit it t
 ```
 {
   "dependencies": {
-    "com.athena.uiframework": "https://github.com/thnthnh1/athena_framework.git#v1.0.1",
+    "com.ggmakers.uiframework": "https://github.com/thnthnh1/ggmakers_ui_framework.git",
     ...
   }
 }
@@ -18,7 +18,7 @@ Find the manifest.json file in the Packages folder of your project and edit it t
 To update the package, change suffix #{version} to the target version.
 
 ```
- "com.athena.uiframework": "https://github.com/thnthnh1/athena_framework.git#v1.0.2"
+ "com.ggmakers.uiframework": "https://github.com/thnthnh1/ggmakers_ui_framework.git#v1.0.4"
 ```
 
 
@@ -26,15 +26,13 @@ To update the package, change suffix #{version} to the target version.
 
 1. Create UIManager in the scene by select the command on the toolbar:
 ```
-Athena > UIFramework > Create UIManager
+GGMakers > UIFramework > Create UIManager
 ```
-
-![create_ui_manager](https://github.com/user-attachments/assets/e9d77dcc-e8c6-43a9-b2f3-cd0ffccf329c)
 
 2. Create new class inheirits UIController for each UI that you want to implement.
 
 ```C#
-using Athena.UIFramework;
+using GGMakers.UIFramework;
 
 public class DemoUI : UIController
 {
@@ -58,7 +56,7 @@ Resources > UIPrefabs
 
 ```C#
 using UnityEngine;
-using Athena.UIFramework;
+using GGMakers.UIFramework;
 
 public class SceneController : MonoBehaviour
 {
