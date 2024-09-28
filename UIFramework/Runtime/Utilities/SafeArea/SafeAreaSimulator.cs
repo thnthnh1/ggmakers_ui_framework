@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System;
 
-namespace Athena.UIFramework.Utilities
+namespace GGMakers.UIFramework.Utilities
 {
     public class SafeAreaSimulator : MonoBehaviour
     {

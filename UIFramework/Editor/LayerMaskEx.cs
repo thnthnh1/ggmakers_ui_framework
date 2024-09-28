@@ -3,7 +3,7 @@ using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
-namespace Athena.Editor
+namespace GGMakers.Editor
 {
     public class LayerMaskEx
     {

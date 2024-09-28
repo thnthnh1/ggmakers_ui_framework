@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Athena.UIFramework
+namespace GGMakers.UIFramework
 {
     public class ActiveControllerData
     {

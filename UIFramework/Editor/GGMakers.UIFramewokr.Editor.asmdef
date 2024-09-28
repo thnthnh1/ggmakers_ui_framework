@@ -1,8 +1,8 @@
 {
-    "name": "Athena.UIFramework.Samples",
+    "name": "GGMakers.UIFramework.Editor",
     "rootNamespace": "",
     "references": [
-        "Athena.UIFramework.Runtime"
+        "GGMakers.UIFramework.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
