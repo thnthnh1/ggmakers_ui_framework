@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Athena.UIFramework.Utilities
+namespace GGMakers.UIFramework.Utilities
 {
     /// <summary>
     /// Safe area implementation for notched mobile devices. Usage:

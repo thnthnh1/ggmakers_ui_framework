@@ -2,21 +2,21 @@
 using UnityEditor;
 using System.Collections.Generic;
 using System.IO;
-using Athena.UIFramework;
-using Athena.UIFramework.Utilities;
+using GGMakers.UIFramework;
+using GGMakers.UIFramework.Utilities;
 
-namespace Athena.Editor
+namespace GGMakers.Editor
 {
     public static class UtilMenu
     {
-        [MenuItem("Athena/UIFramework/Utililies/Clear Player Pref", false, 20)]
+        [MenuItem("GGMakers/UIFramework/Utililies/Clear Player Pref", false, 20)]
         public static void ClearPlayerPref()
         {
             PlayerPrefs.DeleteAll();
             Debug.Log("Cleared player preferences!");
         }
 
-        [MenuItem("Athena/UIFramework/Utililies/Clear Persistant Data", false, 20)]
+        [MenuItem("GGMakers/UIFramework/Utililies/Clear Persistant Data", false, 20)]
         public static void ClearPersistantData()
         {
             Debug.Log("Persistant data located at :" + Application.persistentDataPath);
@@ -25,7 +25,7 @@ namespace Athena.Editor
             Debug.Log("Deleted player persistant data!");
         }
 
-        [MenuItem("Athena/UIFramework/Utililies/Clear temporary Data", false, 20)]
+        [MenuItem("GGMakers/UIFramework/Utililies/Clear temporary Data", false, 20)]
         public static void ClearTempData()
         {
             Debug.Log("Temporary data located at :" + Application.temporaryCachePath);
@@ -34,7 +34,7 @@ namespace Athena.Editor
             Debug.Log("Deleted player temporary data!");
         }
 
-        [MenuItem("Athena/UIFramework/Utililies/Clear All", false, 12)]
+        [MenuItem("GGMakers/UIFramework/Utililies/Clear All", false, 12)]
         public static void ClearAll()
         {
             ClearPlayerPref();
@@ -43,7 +43,7 @@ namespace Athena.Editor
             Caching.ClearCache();
         }
 
-        [MenuItem("Athena/UIFramework/Utililies/UnloadAllUnusedAssets", false, 20)]
+        [MenuItem("GGMakers/UIFramework/Utililies/UnloadAllUnusedAssets", false, 20)]
         public static void UnloadAllUnusedAsset()
         {
             Debug.Log("Unload all unused assets ");
@@ -52,7 +52,7 @@ namespace Athena.Editor
             EditorUtility.UnloadUnusedAssetsImmediate();
         }
 
-        [MenuItem("Athena/UIFramework/Create UIManager", false, 30)]
+        [MenuItem("GGMakers/UIFramework/Create UIManager", false, 30)]
         public static void CreateUIManager()
         {
             //Clean up current scene

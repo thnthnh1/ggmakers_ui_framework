@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-namespace Athena.UIFramework
+namespace GGMakers.UIFramework
 {
     public interface IActiveUIListener
     {

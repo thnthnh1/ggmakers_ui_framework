@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-namespace Athena.UIFramework
+namespace GGMakers.UIFramework
 {
     public static class UILayer
     {

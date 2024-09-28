@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Athena.UIFramework.Utilities
+namespace GGMakers.UIFramework.Utilities
 {
     public class WorldSpaceCanvasScaler : MonoBehaviour
     {

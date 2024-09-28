@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Athena.UIFramework;
+using GGMakers.UIFramework;
 
 public class DemoUI : UIController
 {
