@@ -38,7 +38,7 @@ jobs:
         fi
         git push -f -u origin upm
       env:
-        PKG_ROOT: Unity/Packages/com.athena.uiframework
+        PKG_ROOT: Unity/Packages/com.ggmakers.uiframework
     - name: Create upm git tag
       if: steps.semantic.outputs.new_release_published == 'true'
       run: |
