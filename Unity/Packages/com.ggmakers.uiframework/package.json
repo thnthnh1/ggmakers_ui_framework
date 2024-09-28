@@ -1,14 +1,14 @@
 {
-  "name": "com.athena.uiframework",
+  "name": "com.ggmakers.uiframework",
   "version": "1.0.4",
   "type": "sample",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thnthnh1/athena_framework.git"
+    "url": "git+https://github.com/thnthnh1/ggmakers_ui_framework"
   },
-  "author": "Athena",
+  "author": "GGMakers",
   "license": "MIT",
-  "homepage": "https://github.com/thnthnh1/athena_framework#readme",
+  "homepage": "https://github.com/thnthnh1/ggmakers_ui_framework#readme",
   "samples": [
     {
       "displayName": "Demo",
